@@ -1,0 +1,1418 @@
+{
+  "generated_at": "2026-09-28T21:42:48.756866+00:00",
+  "summary": {
+    "total_keys": 23894,
+    "unique_repos": 20321,
+    "by_status": {
+      "invalid": 21928,
+      "valid": 1858,
+      "quarantined": 108
+    },
+    "by_repo_type": {
+      "org": 3625,
+      "personal": 20269
+    }
+  },
+  "heatmap": {
+    "all": {
+      "x": [
+        "personal",
+        "org"
+      ],
+      "y": [
+        "other",
+        "py",
+        "js",
+        ".env",
+        "yml",
+        "json",
+        "md",
+        "properties",
+        "no_ext",
+        "txt",
+        "java",
+        "tf",
+        "php",
+        "ipynb",
+        "rb",
+        "ts"
+      ],
+      "z": [
+        [
+          4061,
+          908
+        ],
+        [
+          2586,
+          355
+        ],
+        [
+          1922,
+          277
+        ],
+        [
+          2018,
+          173
+        ],
+        [
+          1454,
+          559
+        ],
+        [
+          1099,
+          243
+        ],
+        [
+          1032,
+          220
+        ],
+        [
+          1012,
+          145
+        ],
+        [
+          854,
+          109
+        ],
+        [
+          810,
+          86
+        ],
+        [
+          666,
+          132
+        ],
+        [
+          727,
+          39
+        ],
+        [
+          637,
+          123
+        ],
+        [
+          510,
+          80
+        ],
+        [
+          463,
+          105
+        ],
+        [
+          418,
+          71
+        ]
+      ]
+    },
+    "by_status": {
+      "valid": {
+        "x": [
+          "personal",
+          "org"
+        ],
+        "y": [
+          ".env",
+          "other",
+          "py",
+          "js",
+          "yml",
+          "properties",
+          "json",
+          "md",
+          "ts",
+          "txt",
+          "java",
+          "no_ext",
+          "php",
+          "ipynb",
+          "tf",
+          "rb"
+        ],
+        "z": [
+          [
+            416,
+            21
+          ],
+          [
+            272,
+            42
+          ],
+          [
+            194,
+            29
+          ],
+          [
+            174,
+            15
+          ],
+          [
+            115,
+            29
+          ],
+          [
+            127,
+            13
+          ],
+          [
+            76,
+            7
+          ],
+          [
+            54,
+            6
+          ],
+          [
+            53,
+            4
+          ],
+          [
+            45,
+            2
+          ],
+          [
+            38,
+            7
+          ],
+          [
+            39,
+            6
+          ],
+          [
+            30,
+            4
+          ],
+          [
+            12,
+            4
+          ],
+          [
+            9,
+            4
+          ],
+          [
+            9,
+            2
+          ]
+        ]
+      },
+      "invalid": {
+        "x": [
+          "personal",
+          "org"
+        ],
+        "y": [
+          "other",
+          "py",
+          "js",
+          "yml",
+          ".env",
+          "json",
+          "md",
+          "properties",
+          "no_ext",
+          "txt",
+          "java",
+          "tf",
+          "php",
+          "ipynb",
+          "rb",
+          "ts"
+        ],
+        "z": [
+          [
+            3765,
+            864
+          ],
+          [
+            2382,
+            325
+          ],
+          [
+            1742,
+            261
+          ],
+          [
+            1335,
+            527
+          ],
+          [
+            1583,
+            152
+          ],
+          [
+            1020,
+            236
+          ],
+          [
+            971,
+            214
+          ],
+          [
+            881,
+            131
+          ],
+          [
+            814,
+            103
+          ],
+          [
+            765,
+            84
+          ],
+          [
+            623,
+            124
+          ],
+          [
+            712,
+            35
+          ],
+          [
+            606,
+            119
+          ],
+          [
+            496,
+            75
+          ],
+          [
+            454,
+            103
+          ],
+          [
+            359,
+            67
+          ]
+        ]
+      },
+      "quarantined": {
+        "x": [
+          "personal",
+          "org"
+        ],
+        "y": [
+          "other",
+          ".env",
+          "py",
+          "js",
+          "md",
+          "yml",
+          "java",
+          "tf",
+          "ts",
+          "properties",
+          "ipynb",
+          "json",
+          "no_ext",
+          "php"
+        ],
+        "z": [
+          [
+            24,
+            2
+          ],
+          [
+            19,
+            0
+          ],
+          [
+            10,
+            1
+          ],
+          [
+            6,
+            1
+          ],
+          [
+            7,
+            0
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            5,
+            1
+          ],
+          [
+            6,
+            0
+          ],
+          [
+            6,
+            0
+          ],
+          [
+            4,
+            1
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            0
+          ]
+        ]
+      }
+    },
+    "insight": {
+      "question": "Where do AKIA leaks cluster by file type and repository owner (personal vs organization)?",
+      "basis": "File extension approximates secret format (.env, YAML, source code); repository owner type reflects security maturity and exposure surface.",
+      "finding": "84.8% of all hits are in personal repos (20,269 of 23,894). Top file types skew personal: .env 92.1%, py 87.9%, js 87.4%. Org share is higher in yml (27.8%) \u2014 likely CI/CD and IaC configs."
+    }
+  },
+  "heatmaps": {
+    "ext_repo_type": {
+      "all": {
+        "x": [
+          "personal",
+          "org"
+        ],
+        "y": [
+          "other",
+          "py",
+          "js",
+          ".env",
+          "yml",
+          "json",
+          "md",
+          "properties",
+          "no_ext",
+          "txt",
+          "java",
+          "tf",
+          "php",
+          "ipynb",
+          "rb",
+          "ts"
+        ],
+        "z": [
+          [
+            4061,
+            908
+          ],
+          [
+            2586,
+            355
+          ],
+          [
+            1922,
+            277
+          ],
+          [
+            2018,
+            173
+          ],
+          [
+            1454,
+            559
+          ],
+          [
+            1099,
+            243
+          ],
+          [
+            1032,
+            220
+          ],
+          [
+            1012,
+            145
+          ],
+          [
+            854,
+            109
+          ],
+          [
+            810,
+            86
+          ],
+          [
+            666,
+            132
+          ],
+          [
+            727,
+            39
+          ],
+          [
+            637,
+            123
+          ],
+          [
+            510,
+            80
+          ],
+          [
+            463,
+            105
+          ],
+          [
+            418,
+            71
+          ]
+        ]
+      },
+      "by_status": {
+        "valid": {
+          "x": [
+            "personal",
+            "org"
+          ],
+          "y": [
+            ".env",
+            "other",
+            "py",
+            "js",
+            "yml",
+            "properties",
+            "json",
+            "md",
+            "ts",
+            "txt",
+            "java",
+            "no_ext",
+            "php",
+            "ipynb",
+            "tf",
+            "rb"
+          ],
+          "z": [
+            [
+              416,
+              21
+            ],
+            [
+              272,
+              42
+            ],
+            [
+              194,
+              29
+            ],
+            [
+              174,
+              15
+            ],
+            [
+              115,
+              29
+            ],
+            [
+              127,
+              13
+            ],
+            [
+              76,
+              7
+            ],
+            [
+              54,
+              6
+            ],
+            [
+              53,
+              4
+            ],
+            [
+              45,
+              2
+            ],
+            [
+              38,
+              7
+            ],
+            [
+              39,
+              6
+            ],
+            [
+              30,
+              4
+            ],
+            [
+              12,
+              4
+            ],
+            [
+              9,
+              4
+            ],
+            [
+              9,
+              2
+            ]
+          ]
+        },
+        "invalid": {
+          "x": [
+            "personal",
+            "org"
+          ],
+          "y": [
+            "other",
+            "py",
+            "js",
+            "yml",
+            ".env",
+            "json",
+            "md",
+            "properties",
+            "no_ext",
+            "txt",
+            "java",
+            "tf",
+            "php",
+            "ipynb",
+            "rb",
+            "ts"
+          ],
+          "z": [
+            [
+              3765,
+              864
+            ],
+            [
+              2382,
+              325
+            ],
+            [
+              1742,
+              261
+            ],
+            [
+              1335,
+              527
+            ],
+            [
+              1583,
+              152
+            ],
+            [
+              1020,
+              236
+            ],
+            [
+              971,
+              214
+            ],
+            [
+              881,
+              131
+            ],
+            [
+              814,
+              103
+            ],
+            [
+              765,
+              84
+            ],
+            [
+              623,
+              124
+            ],
+            [
+              712,
+              35
+            ],
+            [
+              606,
+              119
+            ],
+            [
+              496,
+              75
+            ],
+            [
+              454,
+              103
+            ],
+            [
+              359,
+              67
+            ]
+          ]
+        },
+        "quarantined": {
+          "x": [
+            "personal",
+            "org"
+          ],
+          "y": [
+            "other",
+            ".env",
+            "py",
+            "js",
+            "md",
+            "yml",
+            "java",
+            "tf",
+            "ts",
+            "properties",
+            "ipynb",
+            "json",
+            "no_ext",
+            "php"
+          ],
+          "z": [
+            [
+              24,
+              2
+            ],
+            [
+              19,
+              0
+            ],
+            [
+              10,
+              1
+            ],
+            [
+              6,
+              1
+            ],
+            [
+              7,
+              0
+            ],
+            [
+              4,
+              3
+            ],
+            [
+              5,
+              1
+            ],
+            [
+              6,
+              0
+            ],
+            [
+              6,
+              0
+            ],
+            [
+              4,
+              1
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              0
+            ]
+          ]
+        }
+      },
+      "insight": {
+        "question": "Where do AKIA leaks cluster by file type and repository owner (personal vs organization)?",
+        "basis": "File extension approximates secret format (.env, YAML, source code); repository owner type reflects security maturity and exposure surface.",
+        "finding": "84.8% of all hits are in personal repos (20,269 of 23,894). Top file types skew personal: .env 92.1%, py 87.9%, js 87.4%. Org share is higher in yml (27.8%) \u2014 likely CI/CD and IaC configs."
+      }
+    },
+    "repo_type_status": {
+      "all": {
+        "x": [
+          "valid",
+          "invalid",
+          "quarantined"
+        ],
+        "y": [
+          "personal",
+          "org"
+        ],
+        "z": [
+          [
+            1663,
+            18508,
+            98
+          ],
+          [
+            195,
+            3420,
+            10
+          ]
+        ],
+        "y_label": "Repository type",
+        "x_label": "Validation status"
+      },
+      "insight": {
+        "question": "How many exposed keys are actually valid in personal vs organization repositories?",
+        "basis": "Validation via boto3 GetCallerIdentity separates working credentials from noise; owner type shows where real risk sits versus scan volume.",
+        "finding": "Personal repos: 1,663 valid (8.2%), 18,508 invalid, 98 quarantined. Organization repos: 195 valid (5.4%), 3,420 invalid, 10 quarantined. 89.5% of all valid keys are in personal repos \u2014 absolute risk is concentrated there, but 195 valid org keys warrant GHAS push protection."
+      }
+    },
+    "ext_status": {
+      "all": {
+        "x": [
+          "valid",
+          "invalid",
+          "quarantined"
+        ],
+        "y": [
+          "other",
+          "py",
+          "js",
+          ".env",
+          "yml",
+          "json",
+          "md",
+          "properties",
+          "no_ext",
+          "txt",
+          "java",
+          "tf",
+          "php",
+          "ipynb",
+          "rb",
+          "ts"
+        ],
+        "z": [
+          [
+            314,
+            4629,
+            26
+          ],
+          [
+            223,
+            2707,
+            11
+          ],
+          [
+            189,
+            2003,
+            7
+          ],
+          [
+            437,
+            1735,
+            19
+          ],
+          [
+            144,
+            1862,
+            7
+          ],
+          [
+            83,
+            1256,
+            3
+          ],
+          [
+            60,
+            1185,
+            7
+          ],
+          [
+            140,
+            1012,
+            5
+          ],
+          [
+            45,
+            917,
+            1
+          ],
+          [
+            47,
+            849,
+            0
+          ],
+          [
+            45,
+            747,
+            6
+          ],
+          [
+            13,
+            747,
+            6
+          ],
+          [
+            34,
+            725,
+            1
+          ],
+          [
+            16,
+            571,
+            3
+          ],
+          [
+            11,
+            557,
+            0
+          ],
+          [
+            57,
+            426,
+            6
+          ]
+        ],
+        "y_label": "File extension",
+        "x_label": "Validation status"
+      },
+      "insight": {
+        "question": "Which file types most often contain working credentials vs scanner noise?",
+        "basis": "Valid-key share by extension shows where to focus pre-commit hooks, push protection, and GHAS \u2014 not all formats are equally dangerous.",
+        "finding": "Highest valid rates (min 100 hits): .env 19.9% valid (437/2,191), properties 12.1% valid (140/1,157), ts 11.7% valid (57/489). .env files are the top priority for secret scanning. High-volume py (7.6% valid) and js (8.6% valid) are mostly noise with a long tail of real leaks."
+      }
+    }
+  },
+  "top_paths": {
+    "all": [
+      {
+        "category": "other",
+        "count": 9457
+      },
+      {
+        "category": "config",
+        "count": 4094
+      },
+      {
+        "category": "src",
+        "count": 3349
+      },
+      {
+        "category": "env",
+        "count": 3066
+      },
+      {
+        "category": "test",
+        "count": 1387
+      },
+      {
+        "category": "terraform",
+        "count": 689
+      },
+      {
+        "category": "data",
+        "count": 684
+      },
+      {
+        "category": "scripts",
+        "count": 462
+      },
+      {
+        "category": "examples",
+        "count": 314
+      },
+      {
+        "category": "docs",
+        "count": 230
+      },
+      {
+        "category": "fixtures",
+        "count": 162
+      }
+    ],
+    "valid": [
+      {
+        "category": "env",
+        "count": 527
+      },
+      {
+        "category": "other",
+        "count": 526
+      },
+      {
+        "category": "src",
+        "count": 344
+      },
+      {
+        "category": "config",
+        "count": 332
+      },
+      {
+        "category": "test",
+        "count": 44
+      },
+      {
+        "category": "scripts",
+        "count": 30
+      },
+      {
+        "category": "data",
+        "count": 27
+      },
+      {
+        "category": "examples",
+        "count": 15
+      },
+      {
+        "category": "terraform",
+        "count": 10
+      },
+      {
+        "category": "docs",
+        "count": 3
+      }
+    ],
+    "invalid": [
+      {
+        "category": "other",
+        "count": 8892
+      },
+      {
+        "category": "config",
+        "count": 3749
+      },
+      {
+        "category": "src",
+        "count": 2983
+      },
+      {
+        "category": "env",
+        "count": 2516
+      },
+      {
+        "category": "test",
+        "count": 1339
+      },
+      {
+        "category": "terraform",
+        "count": 677
+      },
+      {
+        "category": "data",
+        "count": 656
+      },
+      {
+        "category": "scripts",
+        "count": 429
+      },
+      {
+        "category": "examples",
+        "count": 299
+      },
+      {
+        "category": "docs",
+        "count": 226
+      },
+      {
+        "category": "fixtures",
+        "count": 162
+      }
+    ],
+    "quarantined": [
+      {
+        "category": "other",
+        "count": 39
+      },
+      {
+        "category": "env",
+        "count": 23
+      },
+      {
+        "category": "src",
+        "count": 22
+      },
+      {
+        "category": "config",
+        "count": 13
+      },
+      {
+        "category": "test",
+        "count": 4
+      },
+      {
+        "category": "scripts",
+        "count": 3
+      },
+      {
+        "category": "terraform",
+        "count": 2
+      },
+      {
+        "category": "docs",
+        "count": 1
+      },
+      {
+        "category": "data",
+        "count": 1
+      }
+    ]
+  },
+  "top_extensions": {
+    "all": [
+      {
+        "ext": "py",
+        "count": 2941
+      },
+      {
+        "ext": "js",
+        "count": 2199
+      },
+      {
+        "ext": ".env",
+        "count": 2191
+      },
+      {
+        "ext": "yml",
+        "count": 2013
+      },
+      {
+        "ext": "json",
+        "count": 1342
+      },
+      {
+        "ext": "md",
+        "count": 1252
+      },
+      {
+        "ext": "properties",
+        "count": 1157
+      },
+      {
+        "ext": "no_ext",
+        "count": 963
+      },
+      {
+        "ext": "txt",
+        "count": 896
+      },
+      {
+        "ext": "java",
+        "count": 798
+      },
+      {
+        "ext": "tf",
+        "count": 766
+      },
+      {
+        "ext": "php",
+        "count": 760
+      },
+      {
+        "ext": "ipynb",
+        "count": 590
+      },
+      {
+        "ext": "rb",
+        "count": 568
+      },
+      {
+        "ext": "ts",
+        "count": 489
+      }
+    ],
+    "valid": [
+      {
+        "ext": ".env",
+        "count": 437
+      },
+      {
+        "ext": "py",
+        "count": 223
+      },
+      {
+        "ext": "js",
+        "count": 189
+      },
+      {
+        "ext": "yml",
+        "count": 144
+      },
+      {
+        "ext": "properties",
+        "count": 140
+      },
+      {
+        "ext": "json",
+        "count": 83
+      },
+      {
+        "ext": "md",
+        "count": 60
+      },
+      {
+        "ext": "ts",
+        "count": 57
+      },
+      {
+        "ext": "txt",
+        "count": 47
+      },
+      {
+        "ext": "java",
+        "count": 45
+      },
+      {
+        "ext": "no_ext",
+        "count": 45
+      },
+      {
+        "ext": "php",
+        "count": 34
+      },
+      {
+        "ext": "csv",
+        "count": 27
+      },
+      {
+        "ext": "yaml",
+        "count": 26
+      },
+      {
+        "ext": "example",
+        "count": 26
+      }
+    ],
+    "invalid": [
+      {
+        "ext": "py",
+        "count": 2707
+      },
+      {
+        "ext": "js",
+        "count": 2003
+      },
+      {
+        "ext": "yml",
+        "count": 1862
+      },
+      {
+        "ext": ".env",
+        "count": 1735
+      },
+      {
+        "ext": "json",
+        "count": 1256
+      },
+      {
+        "ext": "md",
+        "count": 1185
+      },
+      {
+        "ext": "properties",
+        "count": 1012
+      },
+      {
+        "ext": "no_ext",
+        "count": 917
+      },
+      {
+        "ext": "txt",
+        "count": 849
+      },
+      {
+        "ext": "java",
+        "count": 747
+      },
+      {
+        "ext": "tf",
+        "count": 747
+      },
+      {
+        "ext": "php",
+        "count": 725
+      },
+      {
+        "ext": "ipynb",
+        "count": 571
+      },
+      {
+        "ext": "rb",
+        "count": 557
+      },
+      {
+        "ext": "ts",
+        "count": 426
+      }
+    ],
+    "quarantined": [
+      {
+        "ext": ".env",
+        "count": 19
+      },
+      {
+        "ext": "py",
+        "count": 11
+      },
+      {
+        "ext": "md",
+        "count": 7
+      },
+      {
+        "ext": "yml",
+        "count": 7
+      },
+      {
+        "ext": "js",
+        "count": 7
+      },
+      {
+        "ext": "ts",
+        "count": 6
+      },
+      {
+        "ext": "tf",
+        "count": 6
+      },
+      {
+        "ext": "java",
+        "count": 6
+      },
+      {
+        "ext": "properties",
+        "count": 5
+      },
+      {
+        "ext": "yaml",
+        "count": 4
+      },
+      {
+        "ext": "csv",
+        "count": 4
+      },
+      {
+        "ext": "json",
+        "count": 3
+      },
+      {
+        "ext": "ipynb",
+        "count": 3
+      },
+      {
+        "ext": "sh",
+        "count": 3
+      },
+      {
+        "ext": "cs",
+        "count": 2
+      }
+    ]
+  },
+  "top_repos": [
+    {
+      "repository": "zycoder0day/hidden-1",
+      "count": 210
+    },
+    {
+      "repository": "fnicola/assessments",
+      "count": 72
+    },
+    {
+      "repository": "demon1k/aws-creds-scanner",
+      "count": 51
+    },
+    {
+      "repository": "DiddyMeech/Titan-Reborn",
+      "count": 49
+    },
+    {
+      "repository": "travis-ci/travis-yml",
+      "count": 41
+    },
+    {
+      "repository": "constXife/corp-ner-dlp",
+      "count": 36
+    },
+    {
+      "repository": "hamik112/seller_center",
+      "count": 35
+    },
+    {
+      "repository": "sumik5/HashiCorpCertifiedTerraformAssociateLabs",
+      "count": 33
+    },
+    {
+      "repository": "KACopilot/test123",
+      "count": 32
+    },
+    {
+      "repository": "NagarjunNagesh/learn-terraform",
+      "count": 27
+    },
+    {
+      "repository": "FVLCN/secrets-hunter",
+      "count": 26
+    },
+    {
+      "repository": "nowage/terraformExecuter",
+      "count": 25
+    },
+    {
+      "repository": "CactusJack677/AndroidBCC",
+      "count": 24
+    },
+    {
+      "repository": "timyiu478/wiz-challenges",
+      "count": 21
+    },
+    {
+      "repository": "dherault/leaked_keys",
+      "count": 21
+    },
+    {
+      "repository": "Observal/Observal",
+      "count": 20
+    },
+    {
+      "repository": "tuhh-softsec/DockerCleaner",
+      "count": 18
+    },
+    {
+      "repository": "piedmont01/boto",
+      "count": 18
+    },
+    {
+      "repository": "lewydavy/PromptGuard",
+      "count": 17
+    },
+    {
+      "repository": "0dayso/API-1",
+      "count": 17
+    },
+    {
+      "repository": "Cvayoyo/rotate-backup",
+      "count": 16
+    },
+    {
+      "repository": "Brokersswagg0/Phonenumberval",
+      "count": 15
+    },
+    {
+      "repository": "Nux-xader/urlmail_formater",
+      "count": 15
+    },
+    {
+      "repository": "Zahkklm/aws-syndicate",
+      "count": 15
+    },
+    {
+      "repository": "rad9800/cloud-setup",
+      "count": 15
+    }
+  ],
+  "meta": {
+    "mode": "cache-only",
+    "repos_repo_api": 20449,
+    "repos_total": 20321,
+    "owners_total": 19359,
+    "owners_cached": 19359,
+    "repos_unknown": 0
+  }
+}

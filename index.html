@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Where AWS Credentials Leak on GitHub — 2026</title>
+  <link rel="icon" href="assets/logo.jpg" type="image/jpeg" />
+  <link rel="apple-touch-icon" href="assets/logo.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/style.css" />
+  <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
+</head>
+<body>
+  <header class="hero">
+    <div class="container">
+      <p class="eyebrow">AR4CHN05 Security Research</p>
+      <p id="generated" class="meta meta-top"></p>
+      <div class="title-row">
+        <img src="assets/logo.jpg" alt="AR4CHN05" class="title-logo" width="56" height="56" />
+        <h1>Where AWS Credentials Leak on GitHub</h1>
+      </div>
+      <p class="subtitle">Exposure map of AKIA access key IDs found in public repositories</p>
+      <div id="summary" class="summary-grid"></div>
+      <div id="repo-type-summary" class="repo-type-row"></div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="panel heatmap-panel">
+      <div class="panel-head">
+        <h2>File type × Repository type</h2>
+        <div class="filters" id="status-filters" role="group" aria-label="Filter by validation status"></div>
+      </div>
+      <p id="heatmap-ext-repo-question" class="heatmap-question"></p>
+      <div id="heatmap-ext-repo" class="chart"></div>
+      <dl class="heatmap-insight">
+        <dt>Basis</dt>
+        <dd id="heatmap-ext-repo-basis"></dd>
+        <dt>Finding</dt>
+        <dd id="heatmap-ext-repo-finding"></dd>
+      </dl>
+    </section>
+
+    <section class="panel heatmap-panel">
+      <h2>Repository type × Validation status</h2>
+      <p id="heatmap-repo-status-question" class="heatmap-question"></p>
+      <div id="heatmap-repo-status" class="chart chart-compact"></div>
+      <dl class="heatmap-insight">
+        <dt>Basis</dt>
+        <dd id="heatmap-repo-status-basis"></dd>
+        <dt>Finding</dt>
+        <dd id="heatmap-repo-status-finding"></dd>
+      </dl>
+    </section>
+
+    <section class="panel heatmap-panel">
+      <h2>File type × Validation status</h2>
+      <p id="heatmap-ext-status-question" class="heatmap-question"></p>
+      <div id="heatmap-ext-status" class="chart"></div>
+      <dl class="heatmap-insight">
+        <dt>Basis</dt>
+        <dd id="heatmap-ext-status-basis"></dd>
+        <dt>Finding</dt>
+        <dd id="heatmap-ext-status-finding"></dd>
+      </dl>
+    </section>
+
+    <section class="charts-row">
+      <div class="panel half">
+        <h2>Top file extensions</h2>
+        <div id="chart-ext" class="chart chart-sm"></div>
+      </div>
+      <div class="panel half">
+        <h2>Top path categories</h2>
+        <div id="chart-path" class="chart chart-sm"></div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Top repositories (by hit count)</h2>
+      <div id="top-repos" class="repo-table"></div>
+    </section>
+
+    <section class="panel recommendations">
+      <h2>Recommendations</h2>
+      <ul>
+        <li><strong>Pre-commit hooks:</strong> run Gitleaks or TruffleHog on every commit; block pushes that match AKIA patterns.</li>
+        <li><strong>.env files:</strong> never commit <code>.env</code> / <code>.env.local</code>; use <code>.env.example</code> with placeholders only.</li>
+        <li><strong>CI/CD:</strong> inject secrets via GitHub Actions secrets / OIDC — not hardcoded in workflow YAML.</li>
+        <li><strong>GitHub Advanced Security:</strong> enable secret scanning + push protection on org repos.</li>
+        <li><strong>Test fixtures:</strong> redact or mock credentials in <code>fixtures/</code>, <code>tests/</code>, and sample data — many hits come from non-production paths.</li>
+        <li><strong>Terraform / IaC:</strong> use remote state + variable files excluded from git; scan <code>.tf</code> and <code>.tfvars</code> in PR checks.</li>
+      </ul>
+    </section>
+
+    <footer class="disclaimer">
+      <p>Aggregated statistics only. No access keys, secret keys, or source file URLs are published in this report.</p>
+      <p>Data source: AWS GitHub Scanner research corpus — September 2026.</p>
+      <p class="disclaimer-dataset">Partial dataset (server export Sep 2026, invalid keys only) — available on request via <a href="https://t.me/in51d3" rel="noopener noreferrer">@in51d3</a>; not hosted in this repo (GitHub secret scanning).</p>
+      <p class="disclaimer-credit"><a href="https://t.me/in51d3" rel="noopener noreferrer">@in51d3</a> 33514</p>
+    </footer>
+  </main>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>
