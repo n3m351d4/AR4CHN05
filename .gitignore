@@ -1,2 +1,3 @@
 *.backup-pre-logo-theme.*
 data/dataset_invalid_quarantine.json
+deploy_pages.sh
